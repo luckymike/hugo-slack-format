@@ -8,6 +8,7 @@
   {{ errorf "Unable to get page resource %q" $path }}
 {{ end }}
 <table class="slack">
+  {{ if .Get "channel"}}<th colspan="2" class="slack-channel"><span class="slack-channel-hash">#</span>{{ .Get "channel"}}</th>{{end}}
   {{ range $data }}
   <tr class="slack-message">
     <td class="slack-left-gutter">

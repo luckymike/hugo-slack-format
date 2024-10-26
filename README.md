@@ -9,9 +9,11 @@ Copy `shortcodes/slack.html` into `layout/shortcodes/`
 
 ## Usage
 
-This shortcode requires pages resources, so your post must be a [page bundle](https://gohugo.io/content-management/page-bundles/). 
+This shortcode requires pages resources, so your post must be a [page bundle](https://gohugo.io/content-management/page-bundles/).
 
 Slack Conversations are defined in data files. Insert a Slack conversation with the shortcode `slack` and provide the filename via the `script` argument, e.g.: `{{< slack script="example.yml" >}}`.
+
+You can provide an optional channel title, with the `channel` argument, e.g. `{{< slack script="example.yml" channel="general">}}`. The `#` is inserted automatically.
 
 The file contains an array of objects:
 
