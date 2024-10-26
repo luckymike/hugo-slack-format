@@ -1,0 +1,32 @@
+{{ $data := dict }}
+{{ $path := .Get "script" }}
+{{ with .Page.Resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+    {{ $data = . }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get page resource %q" $path }}
+{{ end }}
+<table class="slack">
+  {{ range $data }}
+  <tr class="slack-message">
+    <td class="slack-left-gutter">
+      <span class="slack-avatar">
+        <div>
+            <img src="{{ .avatar }}" class="slack-avatar">
+        </div>
+      </span>
+    </td>
+    <td class="slack-right-gutter">
+      <div class="slack-meta">
+        <span class="slack-sender">{{ .name }}</span>&nbsp;&nbsp;<span class="slack-timestamp">{{ .timestamp }}</span>
+      </div>
+      <div class="slack-text">
+        {{ range .messages }}
+        <p>{{ . | markdownify }}</p>
+        {{ end }}
+      </div>
+    </td>
+  </tr>
+{{ end }}
+</table>

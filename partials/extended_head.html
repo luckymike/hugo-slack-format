@@ -1,0 +1,99 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+  .slack {
+    font-family: "Lato","Slack-Fractions","appleLogo",sans-serif;
+    font-weight: 400;
+    /*width: 600px; */
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .slack td {
+    padding: 0px;
+  }
+
+  .slack-message {
+    margin-top: 100px;
+  }
+
+  .slack-avatar {
+    width: 36px;
+    height: 36px;
+    float: left;
+    border-radius: 3px;
+  }
+
+  .slack-left-gutter {
+    vertical-align: top;
+    width: 36px;
+    border: none;
+  }
+
+  .slack-right-gutter {
+    border: none;
+    line-height: 20px;
+    font-size: medium;
+    letter-spacing: 0;
+  }
+
+  .slack-meta {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .slack-sender {
+    font-weight: 900;
+    padding-right: 5px;
+    display: inline-block;
+
+  }
+
+  .slack-timestamp {
+    color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .slack-text {
+    padding-bottom: 5px;
+  }
+
+  .slack-text p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  .slack-text code {
+    background-color: rgba(var(--sk_foreground_min,29,28,29),.04);
+    color: rgb(var(--dt_color-plt-flamingo-70));
+    border-radius: 3px;
+    padding: 2px 3px 1px;
+  }
+  .slack-text .link {
+    background: rgba(var(--sk_highlight_accent,29,155,209),.1);
+    color: var(--dt_color-content-hgl-1);
+  }
+  .slack-text a {
+    color: rgba(var(--sk_highlight,18,100,163),1);
+    text-decoration: none;
+  }
+  .slack-text a:hover {
+    text-decoration: underline;
+  }
+  .slack-text a[href="@"], .slack-text a[href="#"] {
+    background-color: rgba(var(--sk_highlight_accent,29,155,209),.1);
+    color: rgba(var(--sk_highlight_accent,11,76,140),1);
+    border-radius: 3px;
+    padding: 0 2px 1px;
+  }
+  .slack-text a[href="@"]:hover, .slack-text a[href="#"]:hover {
+    background-color: rgba(var(--sk_highlight_accent,29,155,209),.2);
+    color: rgba(var(--sk_highlight_accent,11,76,140),1)
+  }
+
+</style>
