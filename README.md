@@ -42,5 +42,5 @@ The css styles have some tricks to format links the way Slack does:
 
 A couple good resources for avatar creation:
 
-https://getavataaars.com
-https://avatars.pco.bz
+* https://getavataaars.com
+* https://avatars.pco.bz
