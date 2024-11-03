@@ -24,7 +24,7 @@
       </div>
       <div class="slack-text">
         {{ range .messages }}
-        <p>{{ . | markdownify | replaceRE `<a href="[@|#]">([@|#]\S+)</a>` "<span class=\"slack-link\">$1</span>" | safeHTML }}</p>
+        <p>{{ . | markdownify | replaceRE `<a href="[@|#]">([@|#][^<]+)</a>` "<span class=\"slack-link\">$1</span>" | safeHTML }}</p>
         {{ end }}
       </div>
     </td>
